@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
 	public bool isGrounded;
-	public float playerSpeed = 5.0f;
-	public float jumpHeight = 1.0f;
+	private float playerSpeed;
+	private float jumpHeight;
+
 
 
 	private Rigidbody rb;
 
-
+	private PlayerStat playerStat;
 	private SpriteRenderer spriteRenderer;
 	private Animator anim;
 
@@ -20,6 +21,9 @@ public class PlayerMove : MonoBehaviour
 		rb = GetComponent<Rigidbody>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		anim = GetComponent<Animator>();
+		playerStat = GetComponent<PlayerStat>();
+		playerSpeed = playerStat.speed;
+		jumpHeight = playerStat.jumpForce;
     }
 
 	void Update()
@@ -49,5 +53,6 @@ public class PlayerMove : MonoBehaviour
 			anim.SetBool("run", false);
 		}
 		anim.SetBool("isGrounded", isGrounded);
+
 	}
 }
