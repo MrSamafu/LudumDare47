@@ -1203,7 +1203,7 @@ MeshCollider:
   m_GameObject: {fileID: 27129537055220593}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
@@ -1218,6 +1218,8 @@ GameObject:
   m_Component:
   - component: {fileID: 27129537163964321}
   - component: {fileID: 9138927926852538843}
+  - component: {fileID: 1504912054448138771}
+  - component: {fileID: 3801098659854570189}
   m_Layer: 0
   m_Name: Pile
   m_TagString: Untagged
@@ -1263,6 +1265,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1504912054448138771
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27129537163964320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.1838202, z: 1}
+  m_Center: {x: 0, y: 0.120759726, z: 0}
+--- !u!114 &3801098659854570189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27129537163964320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5469bb6957c034785bc591e5a69317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &27129537255200585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,7 +1478,7 @@ MeshCollider:
   m_GameObject: {fileID: 27129537255200585}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
@@ -2619,7 +2646,7 @@ MeshCollider:
   m_GameObject: {fileID: 27129537442369129}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
@@ -6113,7 +6140,7 @@ MeshCollider:
   m_GameObject: {fileID: 27129537873471850}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30

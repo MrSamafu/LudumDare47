@@ -9,7 +9,7 @@ public class ItemGenerator : MonoBehaviour
 
     private void Start()
     {
-        int x = Random.Range(0, 9);
+        int x = Random.Range(0, itemGenerator.Length - 1);
         Instantiate(pile, itemGenerator[x].transform);
     }
 }
