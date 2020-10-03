@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-	public float speed;
-	public float jumpForce;
 	public bool isGrounded;
+	public float playerSpeed = 5.0f;
+	public float jumpHeight = 1.0f;
+
 
 	private Rigidbody rb;
+
+
 	private SpriteRenderer spriteRenderer;
 	private Animator anim;
 
@@ -21,36 +24,30 @@ public class PlayerMove : MonoBehaviour
 
 	void Update()
 	{
+		float moveDir = Input.GetAxis("Horizontal") * playerSpeed;
+		rb.velocity = new Vector2(moveDir, rb.velocity.y);
 
-		Vector3 dp = new Vector3();
-
-		if (Input.GetKey(KeyCode.Q))
-		{
-			rb.AddForce(Vector3.left * speed * Time.deltaTime);
-			spriteRenderer.flipX = true;
-			anim.SetBool("run",true);
-		}
-
-		if (Input.GetKeyUp(KeyCode.Q)){
-			anim.SetBool("run", false);
-		}
-
-		if (Input.GetKey(KeyCode.D))
-		{
-			rb.AddForce(Vector3.right * speed * Time.deltaTime);
-			spriteRenderer.flipX = false;
-			anim.SetBool("run",true);
-		}
-
-		if (Input.GetKeyUp(KeyCode.D)){
-			anim.SetBool("run", false);
-		}
+		// Your jump code:
 		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+		{
+			rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+		}
+		if (rb.velocity.x != 0)
         {
-			rb.AddForce(Vector3.up * jumpForce * Time.deltaTime, ForceMode.Impulse);
-			
-        }
+			anim.SetBool("run", true);
+			if (rb.velocity.x < 0)
+            {
+				spriteRenderer.flipX = true;
+			}
+			if(rb.velocity.x > 0)
+            {
+				spriteRenderer.flipX = false;
+			}
+		}
+		if (rb.velocity.x == 0)
+        {
+			anim.SetBool("run", false);
+		}
 		anim.SetBool("isGrounded", isGrounded);
-		transform.position += dp;
 	}
 }
