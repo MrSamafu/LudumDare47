@@ -9,7 +9,7 @@ public class PlayerStat : MonoBehaviour
     public float speed;
     public float jumpForce;
     public int battery;
-
+    public int key;
     public TMP_Text batteryText;
 
     private void Start()
