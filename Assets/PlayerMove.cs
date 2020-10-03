@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-	public float speed = 0.18f;
-	public float jumpForce = 4.01f;
+	public float speed;
+	public float jumpForce;
 
 	private Rigidbody rb;
+	private SpriteRenderer spriteRenderer;
+	private Animator anim;
 
 	void Start()
     {
 		rb = GetComponent<Rigidbody>();
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		anim = GetComponent<Animator>();
     }
 
 	void Update()
@@ -22,13 +26,24 @@ public class PlayerMove : MonoBehaviour
 		if (Input.GetKey(KeyCode.Q))
 		{
 			rb.AddForce(Vector3.left * speed * Time.deltaTime);
+			spriteRenderer.flipX = true;
+			anim.SetBool("run",true);
+		}
+
+		if (Input.GetKeyUp(KeyCode.Q)){
+			anim.SetBool("run", false);
 		}
 
 		if (Input.GetKey(KeyCode.D))
 		{
 			rb.AddForce(Vector3.right * speed * Time.deltaTime);
+			spriteRenderer.flipX = false;
+			anim.SetBool("run",true);
 		}
 
+		if (Input.GetKeyUp(KeyCode.D)){
+			anim.SetBool("run", false);
+		}
 		if (Input.GetKeyDown(KeyCode.Space))
         {
 			rb.AddForce(Vector3.up * jumpForce * Time.deltaTime, ForceMode.Impulse);
