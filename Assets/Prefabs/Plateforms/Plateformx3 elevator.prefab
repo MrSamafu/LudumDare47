@@ -89,7 +89,7 @@ BoxCollider:
   m_GameObject: {fileID: 3038499252497507313}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -182,7 +182,7 @@ BoxCollider:
   m_GameObject: {fileID: 4527545911216642568}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -275,7 +275,7 @@ BoxCollider:
   m_GameObject: {fileID: 7112554976770672443}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -289,6 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6503621050764906214}
   - component: {fileID: 6775578520078759134}
+  - component: {fileID: 308983538658802207}
   m_Layer: 0
   m_Name: Plateformx3 elevator
   m_TagString: Untagged
@@ -332,3 +333,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &308983538658802207
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7504535929743173361}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0103505, y: 1, z: 1}
+  m_Center: {x: 1.0051752, y: 0, z: 0}
