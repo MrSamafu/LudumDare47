@@ -21,7 +21,6 @@ public class RandomDoor : MonoBehaviour
                 door.GetComponent<Animator>().SetBool("open", false);
 
             }
-            Debug.Log(x);
         }
         
     }
