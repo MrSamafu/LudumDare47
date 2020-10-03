@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
 	public float speed;
 	public float jumpForce;
+	public bool isGrounded;
 
 	private Rigidbody rb;
 	private SpriteRenderer spriteRenderer;
@@ -44,11 +45,12 @@ public class PlayerMove : MonoBehaviour
 		if (Input.GetKeyUp(KeyCode.D)){
 			anim.SetBool("run", false);
 		}
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
 			rb.AddForce(Vector3.up * jumpForce * Time.deltaTime, ForceMode.Impulse);
+			
         }
-
+		anim.SetBool("isGrounded", isGrounded);
 		transform.position += dp;
 	}
 }
