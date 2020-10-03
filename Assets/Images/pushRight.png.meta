@@ -1,34 +1,24 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 9e9dfaa6cc1d2ad41a62abefbd59d69e
-TextureImporter:
-  internalIDToNameTable: []
-=======
-guid: 6d5b52921758d8545ab62b60be13f6a7
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -6325002907619767876
-    second: Run1
+    second: pushRight_0
   - first:
       213: -5075499578683148574
-    second: Run3
+    second: pushRight_1
   - first:
       213: 5829992713182920856
     second: pushRight_2
   - first:
       213: 1786794549933308627
     second: pushRight_3
->>>>>>> 4782cfd104aa9cbf23bbeb07dd2656b14daacec6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-<<<<<<< HEAD
-    enableMipMap: 1
-=======
     enableMipMap: 0
->>>>>>> 4782cfd104aa9cbf23bbeb07dd2656b14daacec6
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -56,15 +46,6 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-<<<<<<< HEAD
-    wrapU: -1
-    wrapV: -1
-    wrapW: -1
-  nPOTScale: 1
-  lightmap: 0
-  compressionQuality: 50
-  spriteMode: 0
-=======
     wrapU: 1
     wrapV: 1
     wrapW: -1
@@ -72,24 +53,17 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
->>>>>>> 4782cfd104aa9cbf23bbeb07dd2656b14daacec6
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 28, y: 0, z: 19, w: 392}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-<<<<<<< HEAD
-  alphaIsTransparency: 0
-  spriteTessellationDetail: -1
-  textureType: 0
-=======
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
->>>>>>> 4782cfd104aa9cbf23bbeb07dd2656b14daacec6
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -101,28 +75,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
-    outline: []
-    physicsShape: []
-    bones: []
-    spriteID: 
-=======
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -149,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
+        y: 384
         width: 128
-        height: 120
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +134,10 @@ TextureImporter:
       name: pushRight_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 119
+        x: 1
+        y: 255
+        width: 127
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,13 +155,13 @@ TextureImporter:
       name: pushRight_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 127
-        width: 128
-        height: 129
+        x: 1
+        y: 128
+        width: 127
+        height: 127
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -211,13 +176,13 @@ TextureImporter:
       name: pushRight_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 384
-        width: 128
-        height: 128
+        x: 1
+        y: 0
+        width: 127
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -231,8 +196,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4b10ad942b70d1f47b38ad0865be69dd
->>>>>>> 4782cfd104aa9cbf23bbeb07dd2656b14daacec6
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
