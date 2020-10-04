@@ -13,6 +13,7 @@ public class EnemyScript : MonoBehaviour
     {
         initialPosition = transform.position;
         x = 1;
+        StartCoroutine(jump());
     }
 
     // Update is called once per frame
@@ -20,13 +21,15 @@ public class EnemyScript : MonoBehaviour
     {
         if (transform.position.x < initialPosition.x - 2)
         {
-            x = -1;
+            x = 1;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
         if (transform.position.x > initialPosition.x + 2)
         {
-            x = 1;
+            x = -1;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
-        transform.Translate(new Vector2(0, x * speed * Time.deltaTime));
+        transform.Translate(new Vector2(x * speed * Time.deltaTime, 0 ));
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -35,5 +38,12 @@ public class EnemyScript : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerStat>().life -= damage;
         }
+    }
+    IEnumerator jump()
+    {
+        float time = Random.Range(1f, 5f);
+        yield return new WaitForSeconds(time);
+        GetComponent<Rigidbody>().AddForce(Vector3.up * 5, ForceMode.Impulse);
+        StartCoroutine(jump());
     }
 }
