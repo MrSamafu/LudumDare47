@@ -7,7 +7,6 @@ public class MapInfo : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerStay(Collider other)
     {
-        GameObject.Find("MapManager").GetComponent<MapManager>().coor = transform.position;
-        Debug.Log(transform.position);
+        GameObject.Find("MapManager").GetComponent<MapManager>().actualMap = gameObject;
     }
 }
