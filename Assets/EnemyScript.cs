@@ -9,6 +9,7 @@ public class EnemyScript : MonoBehaviour
     public float speed;
     private float x;
     public float damage;
+    public AudioClip damageSound;
     void Start()
     {
         initialPosition = transform.position;
@@ -37,6 +38,7 @@ public class EnemyScript : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             collision.gameObject.GetComponent<PlayerStat>().life -= damage;
+            GetComponentInChildren<AudioSource>().PlayOneShot(damageSound);
         }
     }
     IEnumerator jump()

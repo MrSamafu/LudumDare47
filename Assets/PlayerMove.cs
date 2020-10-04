@@ -15,6 +15,8 @@ public class PlayerMove : MonoBehaviour
 	private PlayerStat playerStat;
 	private SpriteRenderer spriteRenderer;
 	private Animator anim;
+	private AudioSource audioSource;
+	public AudioClip jumpSound;
 
 	void Start()
     {
@@ -24,6 +26,7 @@ public class PlayerMove : MonoBehaviour
 		playerStat = GetComponent<PlayerStat>();
 		playerSpeed = playerStat.speed;
 		jumpHeight = playerStat.jumpForce;
+		audioSource = GetComponent<AudioSource>();
     }
 
 	void Update()
@@ -35,6 +38,7 @@ public class PlayerMove : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
 		{
 			rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+			audioSource.PlayOneShot(jumpSound);
 		}
 		if (rb.velocity.x != 0)
         {
