@@ -12,10 +12,6 @@ public class PlayerStat : MonoBehaviour
     public int key;
     public TMP_Text batteryText;
 
-    private void Start()
-    {
-        
-    }
     private void Update()
     {
         batteryText.text = "Battery : " + battery;

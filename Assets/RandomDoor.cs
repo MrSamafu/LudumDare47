@@ -19,15 +19,8 @@ public class RandomDoor : MonoBehaviour
             else if (x == 1)
             {
                 door.GetComponent<Animator>().SetBool("open", false);
-
             }
         }
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 }

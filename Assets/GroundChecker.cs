@@ -12,15 +12,14 @@ public class GroundChecker : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag != "player" && other.gameObject.tag != "Map")
+        if(other.gameObject.tag != "Player" && other.gameObject.tag != "Map")
         {
             playerMove.isGrounded = true;
-            Debug.Log(other.gameObject.name + "est touché");
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag != "player" && other.gameObject.tag != "Map")
+        if(other.gameObject.tag != "Player" && other.gameObject.tag != "Map")
         {
             playerMove.isGrounded = false;
         }

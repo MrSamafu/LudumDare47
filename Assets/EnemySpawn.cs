@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    public GameObject enemy;
+    public GameObject[] enemy;
     private void Start()
     {
-            Instantiate(enemy, transform);
+        int x = Random.Range(0, 2);
+        Instantiate(enemy[x], transform);
     }
 }
