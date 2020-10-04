@@ -8,4 +8,12 @@ public class MenuSceneManager : MonoBehaviour
     {
         SceneManager.LoadScene("LevelDesign");
     }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void GoToCredit()
+    {
+        SceneManager.LoadScene("Credit");
+    }
 }
