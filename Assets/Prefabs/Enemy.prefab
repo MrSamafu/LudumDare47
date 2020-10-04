@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4925051046173758508}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 704191382241710049}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 5798517892025001389}
   m_Layer: 0
   m_Name: Weakness
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

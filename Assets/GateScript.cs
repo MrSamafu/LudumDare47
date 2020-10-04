@@ -30,7 +30,18 @@ public class GateScript : MonoBehaviour
                 lightGate[i].GetComponent<MeshRenderer>().material = matLightOn;
             }
         }
-
-
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.name == "Player")
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                if(playerStat.battery >= 5)
+                {
+                    Debug.Log("You Win");
+                }
+            }
+        }
     }
 }
