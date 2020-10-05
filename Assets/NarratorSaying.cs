@@ -19,7 +19,7 @@ public class NarratorSaying : MonoBehaviour
     IEnumerator speak()
     {
         yield return new WaitForSeconds(Random.Range(5f, 10f));
-        narratorSay.text = narratorSay.text + sentence[count] + "<br>";
+        narratorSay.text = narratorSay.text + "-" + sentence[count] + "<br>";
         count++;
         if(count == sentence.Length)
         {
@@ -28,7 +28,7 @@ public class NarratorSaying : MonoBehaviour
         else
         {
             StartCoroutine(speak());
-            content.value -= 0.025f;
+            content.value -= 0.020f;
         }
     }
 }
