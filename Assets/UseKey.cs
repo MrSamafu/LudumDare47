@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UseKey : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject bubble;
     private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.tag == "Player")
@@ -14,6 +14,7 @@ public class UseKey : MonoBehaviour
                 if(GetComponentInParent<Animator>().GetBool("open") == true)
                 {
                     Debug.Log("Door is already Open");
+                    bubble.SetActive(false);
                 }
                 else
                 {
@@ -23,5 +24,16 @@ public class UseKey : MonoBehaviour
                 }
             }
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(GameObject.Find("Player").GetComponent<PlayerStat>().key > 0)
+        {
+            bubble.SetActive(true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+            bubble.SetActive(false);        
     }
 }

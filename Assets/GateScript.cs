@@ -8,6 +8,7 @@ public class GateScript : MonoBehaviour
     public GameObject[] lightGate;
     public Material matLightOn;
     public Material matLightOff;
+    public GameObject bubble;
 
     private PlayerStat playerStat;
 
@@ -36,13 +37,24 @@ public class GateScript : MonoBehaviour
     {
         if(other.gameObject.name == "Player")
         {
-            if (Input.GetKey(KeyCode.E))
+            if (playerStat.battery >= 5)
             {
-                if(playerStat.battery >= 5)
+                if (Input.GetKey(KeyCode.E))
                 {
                     SceneManager.LoadScene("WinScene");
                 }
             }
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (playerStat.battery >= 5)
+        {
+            bubble.SetActive(true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        bubble.SetActive(false);
     }
 }
